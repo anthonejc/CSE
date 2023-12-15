@@ -71,10 +71,7 @@ void main()
     }
     for(i=0;i<n;i++)
     {
-        if(d[i+1]>d[i])
-            total+=d[i+1]-d[i];
-        else
-            total+=d[i]-d[i+1];
+        total+=abs(t[i]-t[i+1]);
     }
     printf("total head movements:%d",&total);
 }
