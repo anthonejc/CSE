@@ -16,14 +16,7 @@ void main()
     }
     for(i=0;i<n;i++)
     {
-        if(t[i+1]>t[i])
-        {
-            total+=(t[i+1]-t[i]);
-        }
-        else
-        {
-            total+=(t[i]-t[i+1]);
-        }
+        total+=abs(t[i]-t[i+1]);
     }
     
     printf("%d",&h);
