@@ -10,10 +10,10 @@ void main()
     scanf("%d",&h);
     t[0]=0;
     t[1]=h;
-    n+=2;
     printf("enter the total no: of cylinders:");
     scanf("%d",&c);
-    t[n]=c-1;
+    t[2]=c-1;
+    n+=3;
     printf("enter the track sequences:");
     for(i=2;i<n;i++)
     {
@@ -44,7 +44,7 @@ void main()
             d[l]=t[i];
             l++;
         }
-        for(i=k+1;i<n;i++)
+        for(i=k+1;i<n-1;i++)
         {
             d[l]=t[i];
             l++;
@@ -53,7 +53,7 @@ void main()
     else
     {
         l=0;
-        for(i=k;i<n;i++)
+        for(i=k;i<n-1;i++)
         {
             d[l]=t[i];
             l++;
@@ -65,11 +65,11 @@ void main()
         }
     }
     printf("tracks traversed:");
-    for(i=0;i<n;i++)
+    for(i=0;i<l-1;i++)
     {
         printf("%d",&d[i]);
     }
-    for(i=0;i<n;i++)
+    for(i=0;i<l-1;i++)
     {
         total+=abs(t[i]-t[i+1]);
     }
